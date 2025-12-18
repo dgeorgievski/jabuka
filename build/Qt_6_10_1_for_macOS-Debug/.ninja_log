@@ -1,9 +1,0 @@
-# ninja log v6
-18	298	1765943109850533000	jabuka_autogen/timestamp	95838e18a1b1aec
-1175	1353	1765943110737074078	jabuka.app/Contents/MacOS/jabuka	d3092e70ee033f9e
-18	298	1765943109850533000	jabuka_autogen/mocs_compilation.cpp	95838e18a1b1aec
-18	298	1765943109850533000	/Users/dimitar/Projects/lambda/qt/jabuka/build/Qt_6_10_1_for_macOS-Debug/jabuka_autogen/timestamp	95838e18a1b1aec
-299	1175	1765943109861237365	CMakeFiles/jabuka.dir/applewindow.cpp.o	5bfd085fe543d262
-18	298	1765943109850533000	/Users/dimitar/Projects/lambda/qt/jabuka/build/Qt_6_10_1_for_macOS-Debug/jabuka_autogen/mocs_compilation.cpp	95838e18a1b1aec
-298	1083	1765943109860403449	CMakeFiles/jabuka.dir/jabuka_autogen/mocs_compilation.cpp.o	27f427c74b63f3c6
-299	1084	1765943109860868698	CMakeFiles/jabuka.dir/main.cpp.o	e1413041df00b836
