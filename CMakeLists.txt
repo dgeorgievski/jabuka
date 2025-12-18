@@ -9,6 +9,22 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Hint common Homebrew Qt install locations when QT_PREFIX_PATH is not set
+if(APPLE AND NOT DEFINED ENV{QT_PREFIX_PATH})
+    set(_qt_already_set FALSE)
+    foreach(_qt_path IN LISTS CMAKE_PREFIX_PATH)
+        set(_qt_already_set TRUE)
+    endforeach()
+    if(NOT _qt_already_set)
+        set(_qt_homebrew_candidates "/opt/homebrew/opt/qt" "/usr/local/opt/qt")
+        foreach(_qt_candidate IN LISTS _qt_homebrew_candidates)
+            if(EXISTS "${_qt_candidate}")
+                list(APPEND CMAKE_PREFIX_PATH "${_qt_candidate}")
+            endif()
+        endforeach()
+    endif()
+endif()
+
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
@@ -26,25 +42,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(jabuka
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        searchdialog.h searchdialog.cpp searchdialog.ui
-
     )
-# Define target properties for Android with Qt 6 as:
-#    set_property(TARGET jabuka APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-#                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
-# For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 else()
-    if(ANDROID)
-        add_library(jabuka SHARED
-            ${PROJECT_SOURCES}
-        )
-# Define properties for Android with Qt 5 after find_package() calls as:
-#    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-    else()
-        add_executable(jabuka
-            ${PROJECT_SOURCES}
-        )
-    endif()
+    add_executable(jabuka
+        ${PROJECT_SOURCES}
+    )
 endif()
 
 target_link_libraries(jabuka PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

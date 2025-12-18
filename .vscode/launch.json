@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "configurations": [
+    {
+      "name": "Launch jabuka",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "MIMode": "lldb"
+    }
+  ]
+}

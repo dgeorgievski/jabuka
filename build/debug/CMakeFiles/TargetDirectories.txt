@@ -1,0 +1,9 @@
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/jabuka.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/edit_cache.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/rebuild_cache.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/list_install_components.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/install.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/install/local.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/install/strip.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/jabuka_autogen_timestamp_deps.dir
+/Users/dimitar/Projects/lambda/qt/jabuka/build/debug/CMakeFiles/jabuka_autogen.dir
